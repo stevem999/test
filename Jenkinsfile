@@ -9,7 +9,7 @@ pipeline {
     stage('Build Code') {
       steps {
         echo 'test message'
-        mail(subject: 'TestSubject', body: 'TestBody', from: 'jenkins', to: 'steeve.mercier@gmail.com')
+        fileExists 'test.txt'
       }
     }
   }
