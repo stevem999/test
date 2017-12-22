@@ -4,8 +4,6 @@ pipeline {
     stage('TestStage') {
       steps {
         sleep 1
-      }
-      steps {
         echo 'test message'
         fileExists 'test.txt'
       }
