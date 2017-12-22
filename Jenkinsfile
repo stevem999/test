@@ -21,7 +21,7 @@ pipeline {
       steps {
         echo 'test message'
         fileExists 'test.txt'
-        nexusArtifactUploader artifacts: [[artifactId: 'test.txt', classifier: '', file: 'test.txt', type: 'Text']], credentialsId: 'test', groupId: 'testGroups', nexusUrl: 'localhost:8081', nexusVersion: 'nexus3', protocol: 'https', repository: 'testRawRepoLocal', version: 'testVersion1.2.3'
+        nexusArtifactUploader(artifacts: [[artifactId: 'test.txt', classifier: '', file: 'test.txt', type: 'Text']], credentialsId: 'test', groupId: 'testGroups', nexusUrl: 'localhost:8081', nexusVersion: 'nexus3', protocol: 'https', repository: 'testRawRepoLocal', version: 'testVersion1.2.3')
       }
     }
   }
