@@ -15,6 +15,11 @@ pipeline {
             sleep 1
           }
         }
+        stage('testANT') {
+          steps {
+            sh 'which ant'
+          }
+        }
       }
     }
     stage('Build Code') {
